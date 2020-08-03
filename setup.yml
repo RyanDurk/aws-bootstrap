@@ -7,8 +7,8 @@ Parameters:
 
 Resources:
   CodePipelineS3Bucket:
-    Type: AWS::S3::bucket
-    DeltionPolicy: Retain
+    Type: AWS::S3::Bucket
+    DeletionPolicy: Retain
     Properties:
       BucketName: !Ref CodePipelineBucket
       PublicAccessBlockConfiguration:

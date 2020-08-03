@@ -6,7 +6,7 @@ CLI_PROFILE=awsbootstrap
 
 EC2_INSTANCE_TYPE=t2.micro
 
-AWS_ACCOUNT_ID=`aws sts get-caller-identity --profile $STACKNAME \
+AWS_ACCOUNT_ID=`aws sts get-caller-identity --profile $STACK_NAME \
   --query "Account" --output text`
 CODEPIPELINE_BUCKET="$STACK_NAME-$REGION-codepipeline-$AWS_ACCOUNT_ID"
 GH_ACCESS_TOKEN=$(cat ~/.github/aws-bootstrap-access-token)
